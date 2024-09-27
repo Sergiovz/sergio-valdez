@@ -23,6 +23,15 @@ export const signInCtrl = async (req, res) => {
 
 export const signUpCtrl = async (req, res) => {
   try {
+    const { username, email, password } = req.body;
+
+    const user = {
+      username: username,
+      email: email,
+      password: password,
+    };
+    
+    await createUser(user);
     // ! Completar la función signUpCtrl
   } catch (error) {
     res.status(500).json({ message: error.message });

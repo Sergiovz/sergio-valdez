@@ -23,6 +23,7 @@ $form.addEventListener("submit", async (e) => {
     body: JSON.stringify(entries),
   }).then((response) => {
     if (response.ok) {
+      window.location.href = "/pages/";
       // ! REDIRIGIR AL USUARIO A LA PÁGINA PRINCIPAL
     } else {
       // ! MOSTRAR UN MENSAJE DE ERROR AL USUARIO
